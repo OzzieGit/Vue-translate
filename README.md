@@ -1,0 +1,2 @@
+# Vue-translate
+translate demo
