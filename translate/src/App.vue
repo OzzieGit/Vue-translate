@@ -29,7 +29,6 @@
         this.loadStatic = true;
         this.$http.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20170721T082515Z.54cf3dc583f679db.f4a96182281281d8b5dfe24b4e88298e2133f219&lang='+ language +'&text='+text).then((response)=>{
           this.translatedText = response.data.text[0];
-          // console.log(this.translatedText)
           this.loadStatic = false;
         }).catch((err)=>{
           console.log(err)
@@ -47,12 +46,10 @@ body,html{ width: 100%; height: 100%; overflow: hidden; }
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  /*width: 100%; height: 100%;*/
   height: 500px;
   position: fixed;top: 0; left: 0; bottom: 0; right: 0; margin: auto;
 }
 .head{ padding: 0 0 80px; }
-.head h1{ font-size: 32px; margin-bottom: 20px; color: #409EFF; }
+.head h1{ font-size: 34px; margin-bottom: 20px; color: #409EFF; letter-spacing: 5px; }
 .head p{ color: #999; font-size: 16px; letter-spacing: 5px; }
 </style>
