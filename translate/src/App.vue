@@ -1,5 +1,5 @@
 <template>
-  <div id="app" v-loading="loadStatic">
+  <div id="app" v-loading="loadStatic" element-loading-text="努力翻译中...">
     <div class="head">
       <h1>在线翻译</h1>
       <p>简单/易用/快捷</p>
