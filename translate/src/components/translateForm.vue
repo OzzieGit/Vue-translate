@@ -1,12 +1,11 @@
 <template>
   <div id="translateForm">
-    <!-- <div v-loading="true" ></div> -->
     <el-row :gutter="10">
       <el-col :sm="20" :md="6" :md-offset="9" style="margin: auto; float: none;">
         <el-col :sm="24" :md="12"><el-input :span="2" type="text" placeholder="请输入搜索内容" v-model='textToTranslate'></el-input></el-col>
         <el-col :sm="24" :md="6">
           <el-select class="select" v-model="language">
-            <el-option v-for="item in languageList" :label="item.label" :value="item.value">{{ item.label }}</el-option>
+            <el-option v-for="item in languageList" :key="key" :label="item.label" :value="item.value">{{ item.label }}</el-option>
           </el-select>
         </el-col>
         <el-col :sm="24" :md="6"><el-button class='button' type="primary" @click="formSubmit">搜索</el-button></el-col>
@@ -39,7 +38,7 @@
       }
     },
     methods: {
-      formSubmit:function(e){
+      formSubmit:function(){
         if(this.textToTranslate == ""){
           this.$alert('请输入搜索内容', '提示', {
             confirmButtonText: '确定',
